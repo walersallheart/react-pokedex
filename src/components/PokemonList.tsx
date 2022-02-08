@@ -6,12 +6,16 @@ import Card from './Card';
 export const PokemonList = () => {
     const pokemonList:Pokemon[] = GetPokemonList();
 
-    return <div className={classes['pokemon-list']}>
-        {pokemonList.map(pokemon => {
-            return <Card
-                        key={pokemon.name}
-                        pokemon={pokemon}
-                    />
-        }) }
-    </div>
+    return <>
+        <header></header>
+        <h1>Pokédex</h1>
+        <div className={classes['pokemon-list']}>
+            {pokemonList.map(pokemon => {
+                return <Card
+                            key={pokemon.name}
+                            pokemon={pokemon}
+                        />
+            }) }
+        </div>
+    </>;
 }
