@@ -1,10 +1,10 @@
 [
     { "type":"normal", "color":"#6d6d4e"},
-    { "type":"fire", "color":"#9c531f"},
+    { "type":"fire", "color":"#fb6d6c"},
     { "type":"fighting", "color":"#7d1f1a"},
     { "type":"water", "color":"#445e9c"},
     { "type":"flying", "color":"#6d5e9c"},
-    { "type":"grass", "color":"#4e8234"},
+    { "type":"grass", "color":"#47d0af"},
     { "type":"poison", "color":"#682a68"},
     { "type":"electric", "color":"#f8d030"},
     { "type":"ground", "color":"#e0c068"},
