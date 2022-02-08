@@ -1,7 +1,7 @@
 export type Pokemon = {
     id:string;
     name:string;
-    type?:string[];
+    type:string[];
     description?:string;
     species?:string;
     profile?:PokemonProfile;
