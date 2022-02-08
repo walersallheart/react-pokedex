@@ -1,4 +1,5 @@
 import './App.css';
+import { PokemonList } from './components/PokemonList';
 
 function App() {
   return (
@@ -6,10 +7,7 @@ function App() {
       <header></header>
       <h1>Pokedex</h1>
 
-      <div className="pokemon-list">
-        <div>Bulbasaus</div>
-        <div>Ivysaur</div>
-      </div>
+      <PokemonList />
     </div>
   );
 }

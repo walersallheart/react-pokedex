@@ -8,3 +8,7 @@ export function GetPokemonById(id:number):Pokemon | undefined {
 
     return foundPokemon;
 }
+
+export function GetPokemonList():Pokemon[] {
+    return pokemonData;
+}
