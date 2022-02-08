@@ -8,4 +8,9 @@
     width:100%;
     max-width: 800px;
     font-family: 'circular-std-medium-500';
+    color:#303943;
+}
+
+.App h1 {
+  font-size:30px;
 }
