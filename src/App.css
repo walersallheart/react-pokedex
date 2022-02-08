@@ -9,6 +9,11 @@
     max-width: 800px;
     font-family: 'circular-std-medium-500';
     color:#303943;
+    background-image:url('~/public/images/icons/pokeball.png');
+    background-position: top -55px right -59px;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    padding: 0 18px;
 }
 
 .App h1 {
