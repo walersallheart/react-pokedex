@@ -1,6 +1,11 @@
-.App {
-  margin:0 auto;
-  width:100%;
-  max-width: 800px;
+@font-face {
+  font-family: 'circular-std-medium-500';
+  src: url('fonts/circular-std-medium-500.ttf');
 }
 
+.App {
+    margin:0 auto;
+    width:100%;
+    max-width: 800px;
+    font-family: 'circular-std-medium-500';
+}
