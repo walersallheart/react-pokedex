@@ -1,14 +1,18 @@
-import { Pokemon } from "../model/Pokemon";
 import classes from './Card.module.css';
 import { GetPokemonTypeColor } from "../utils/GetPokemon";
 
-const Card:React.FC<Pokemon> = (props)  => {
-    const typeColor = GetPokemonTypeColor(Number(props.id));
+const Card = (props:any)  => {
+    const pokemon = props.pokemon;
+    const typeColor = GetPokemonTypeColor(Number(pokemon.id));
 
-    return <div className={classes.card} style={{backgroundColor:typeColor, backgroundImage: `url('images/thumbnails/${props.id}.png')`}}>
-        <p className={classes['pokemon-name']}>{props.name}</p>
+    const selectPokemon = () =>  {
+        console.log('selectPokemon');
+    }
+
+    return <div onClick={selectPokemon} className={classes.card} style={{backgroundColor:typeColor, backgroundImage: `url('images/thumbnails/${pokemon.id}.png')`}}>
+        <p className={classes['pokemon-name']}>{pokemon.name}</p>
         <ul className={classes['type-list']}>
-            {props.type?.map(type => <li>{type}</li>)}
+            {pokemon.type?.map((type:string) => <li key={type}>{type}</li>)}
         </ul>
     </div>;
 }

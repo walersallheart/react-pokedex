@@ -7,6 +7,11 @@ export const PokemonList = () => {
     const pokemonList:Pokemon[] = GetPokemonList();
 
     return <div className={classes['pokemon-list']}>
-        { pokemonList.map(pokemon => <Card {...pokemon} />) }
+        {pokemonList.map(pokemon => {
+            return <Card
+                        key={pokemon.name}
+                        pokemon={pokemon}
+                    />
+        }) }
     </div>
 }
