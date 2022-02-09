@@ -1,0 +1,37 @@
+.about{
+    color:#303943;
+}
+
+.description{
+    margin-bottom: 20px;
+    font-size: 17px;
+    line-height: 29px;
+}
+
+.measurements{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 15px;
+    width: 85%;
+    margin: 0 auto 20px auto;
+    border-radius: 15px;
+    filter: drop-shadow(0 0 20px rgba(0,0,0,0.15));
+    background: #fff;
+    padding: 11px 0 11px 36px;
+    box-sizing: border-box;
+}
+
+    .measurements-title{
+        color:#acb0b3;
+    }
+
+.breeding{
+    width: 60%;
+}
+
+    .breeding th{
+        font-size:20px;
+        font-weight: bold;
+    }
