@@ -34,4 +34,19 @@
     .breeding th{
         font-size:20px;
         font-weight: bold;
+        text-align: left;
+        padding-bottom: 10px;
+    }
+
+    .breeding td{
+        padding-bottom: 10px;
+    }
+
+        .breeding tr td:first-child{
+            color:#acb0b3;
+        }
+
+    .breeding img{
+        width:20px;
+        height:20px;
     }

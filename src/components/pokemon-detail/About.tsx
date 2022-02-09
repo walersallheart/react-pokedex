@@ -22,13 +22,13 @@ export const About = () => {
         </div>
 
         <table cellPadding={0} cellSpacing={0} className={classes.breeding}>
-            <th>
-                <td colSpan={3}>Breeding</td>
-            </th>
+            <tr>
+                <th colSpan={3}>Breeding</th>
+            </tr>
             <tr>
                 <td>Gender</td>
-                <td>{gender![0]}</td>
-                <td>{gender![1]}</td>
+                <td><img src={`/images/icons/male.svg`} alt="Male" />{gender![0]}</td>
+                <td><img src={`/images/icons/female.svg`} alt="Female" />{gender![1]}</td>
             </tr>
             <tr>
                 <td>Egg Groups</td>
