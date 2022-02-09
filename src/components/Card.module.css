@@ -6,12 +6,6 @@
     position:relative;
 }
 
-    .thumbnail{
-        position:absolute;
-        right:10px;
-        bottom:10px;
-    }
-
     .card a{
         text-decoration: none;
         color:inherit;

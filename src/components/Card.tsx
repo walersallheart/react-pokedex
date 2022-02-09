@@ -14,9 +14,8 @@ const Card = (props:any)  => {
             <ul className={classes['type-list']}>
                 {pokemon.type?.map((type:string) => <li key={type}>{type}</li>)}
             </ul>
-            <LazyLoad height={100} once>
+            <LazyLoad height={100} once style={{position:'absolute', right:'10px', bottom:'10px'}}>
                 <img
-                    className={classes.thumbnail}
                     src={`images/thumbnails/${pokemon.id}.png`}
                     alt={pokemon.name}
                 />
