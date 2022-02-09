@@ -2,6 +2,7 @@ import classes from './Card.module.css';
 import { GetPokemonTypeColor } from "../utils/GetPokemon";
 import { Link } from 'react-router-dom';
 import LazyLoad from 'react-lazyload';
+import { TypeList } from './TypeList';
 
 const Card = (props:any)  => {
     const pokemon = props.pokemon;
@@ -11,9 +12,9 @@ const Card = (props:any)  => {
     return <div className={classes.card} style={{backgroundColor:typeColor}}>
         <Link to={detailPageLink}>
             <p className={classes['pokemon-name']}>{pokemon.name}</p>
-            <ul className={classes['type-list']}>
-                {pokemon.type?.map((type:string) => <li key={type}>{type}</li>)}
-            </ul>
+
+            <TypeList pokemon={pokemon} />
+
             <LazyLoad height={100} once style={{position:'absolute', right:'10px', bottom:'10px'}}>
                 <img
                     src={`images/thumbnails/${pokemon.id}.png`}

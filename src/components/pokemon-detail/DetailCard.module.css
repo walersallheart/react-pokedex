@@ -1,10 +1,46 @@
 .name-and-number{
-    display: flex;
+    display: table;
+    width:90%;
+    margin:0 auto;
+    font-size: 25px;
+    font-weight: bold;
+    padding: 12px 0;
 }
+
+    .name-and-number > div{
+        display: table-cell;
+    }
+
+    .name{
+        margin:5px 0;
+        vertical-align: middle;
+    }
+
+    .number{
+        flex:1;
+        text-align: right;
+        margin:5px 0;
+        vertical-align: middle;
+        font-size: 20px;
+    }
 
 .type-and-species{
     display: flex;
+    width:90%;
+    margin:0 auto;
 }
+
+    .type-and-species > div{
+        flex:1;
+    }
+
+    .types{
+
+    }
+
+    .species{
+        text-align: right;
+    }
 
 .detail-nav{
     background-color: #fff;
@@ -33,3 +69,7 @@
         color:#313943;
         border-bottom:3px solid #6c79db;
     }
+
+.detail-content{
+    background-color: #fff;
+}
