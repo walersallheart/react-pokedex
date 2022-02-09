@@ -1,7 +1,7 @@
 import classes from './PokemonDetail.module.css';
 import { useParams } from 'react-router-dom';
 import { GetPokemonTypeColor, GetPokemonById } from "../../utils/GetPokemon";
-import Card from '../Card';
+import { DetailCard } from './DetailCard';
 
 export const PokemonDetail = (props:any) => {
     const { id } = useParams();
@@ -9,6 +9,6 @@ export const PokemonDetail = (props:any) => {
     const typeColor = GetPokemonTypeColor(Number(id));
 
     return <div className={classes['detail-view']} style={{backgroundColor:typeColor}}>
-        <Card pokemon={pokemon} />
+        <DetailCard pokemon={pokemon} />
     </div>
 }

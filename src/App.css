@@ -16,6 +16,11 @@
     padding: 0 18px;
 }
 
+.App a{
+  color:#303943;
+  text-decoration: none;
+}
+
 .App h1 {
   font-size:30px;
 }
