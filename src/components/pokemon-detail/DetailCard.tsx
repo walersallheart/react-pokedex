@@ -20,6 +20,13 @@ export const DetailCard = (props:any) => {
             <div className={classes.species}>{pokemon.species}</div>
         </div>
 
+        <div className={classes['full-image']}>
+            <img
+                src={`/images/full/${pokemon.id}.png`}
+                alt={pokemon.name}
+            />
+        </div>
+
         <div className={classes['detail-nav']}>
             <div>
                 <NavLink to={`/pokemon/${pokemon.id}/`}>About</NavLink>
