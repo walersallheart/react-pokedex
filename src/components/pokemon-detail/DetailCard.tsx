@@ -4,12 +4,19 @@ import { NavLink } from "react-router-dom";
 import { Pokemon } from "../../model/Pokemon";
 import { TypeList } from "../TypeList";
 
+import { faSquareXmark } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 import classes from './DetailCard.module.css';
 
 export const DetailCard = (props:any) => {
     const pokemon:Pokemon = props.pokemon;
 
     return <>
+        <div>
+            <FontAwesomeIcon icon={faSquareXmark} />
+        </div>
+
         <div className={classes['name-and-number']}>
             <div className={classes.name}>{pokemon.name}</div>
             <div className={classes.number}>#{pokemon.id}</div>
