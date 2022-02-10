@@ -3,7 +3,7 @@ import { PokemonList } from './components/PokemonList';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { PokemonDetail } from './components/pokemon-detail/PokemonDetail';
 import { About } from './components/pokemon-detail/About';
-import { BaseStats } from './components/pokemon-detail/BaseStats';
+import { BaseStats } from './components/pokemon-detail/stats/BaseStats';
 import { EvolutionChain } from './components/pokemon-detail/EvolutionChain';
 
 function App() {
