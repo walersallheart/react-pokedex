@@ -7,7 +7,7 @@ import { TypeList } from './TypeList';
 const Card = (props:any)  => {
     const pokemon = props.pokemon;
     const typeColor = GetPokemonTypeColor(Number(pokemon.id));
-    const detailPageLink = `pokemon/${pokemon.id}`;
+    const detailPageLink = `pokemon/${pokemon.id}/`;
 
     return <div className={classes.card} style={{backgroundColor:typeColor}}>
         <Link to={detailPageLink}>
@@ -15,7 +15,7 @@ const Card = (props:any)  => {
 
             <TypeList pokemon={pokemon} />
 
-            <LazyLoad height={100} once style={{position:'absolute', right:'10px', bottom:'10px'}}>
+            <LazyLoad height={100} once style={{position:'absolute', right:'10px', bottom:'10px', zIndex:1}}>
                 <img
                     src={`images/thumbnails/${pokemon.id}.png`}
                     alt={pokemon.name}
