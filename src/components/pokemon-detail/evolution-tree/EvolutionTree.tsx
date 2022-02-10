@@ -14,10 +14,11 @@ export const EvolutionTree = (props:any) => {
             <div>
                 <EvolutionThumbnail pokemon={previousPokemon} />
             </div>
-            <div><FontAwesomeIcon icon={faArrowRight} /></div>
             <div>
-            <EvolutionThumbnail pokemon={nextPokemon} />
-
+                <FontAwesomeIcon icon={faArrowRight} />
+            </div>
+            <div>
+                <EvolutionThumbnail pokemon={nextPokemon} />
             </div>
         </div>
     </>;
