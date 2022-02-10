@@ -20,7 +20,7 @@ body{ /*! Temporary to make measuring against the light background of certain co
     padding: 0 18px;
 }
 
-.App a{
+a{
   color:#303943;
   text-decoration: none;
 }

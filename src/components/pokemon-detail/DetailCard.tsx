@@ -15,7 +15,6 @@ import { useEffect, useState } from "react";
 
 export const DetailCard = (props:any) => {
     const pokemon:Pokemon = props.pokemon;
-
     const [favorited,  setFavorited] = useState(false);
 
     useEffect(() => {
@@ -23,15 +22,13 @@ export const DetailCard = (props:any) => {
     }, [props.pokemon.id]);
 
     const toggleFavorite = (event:any):void =>  {
-        console.log(event);
-
         setFavorited(ToggleFavorite(Number(pokemon.id)));
     }
 
     return <>
         <div className={classes['arrow-and-favorites']}>
             <div>
-                <NavLink to={`/`}><FontAwesomeIcon title="Back to Pokemon List" icon={faArrowLeft} /></NavLink>
+                <NavLink to={`/`} className={classes['back-button']}><FontAwesomeIcon title="Back to Pokemon List" icon={faArrowLeft} /></NavLink>
             </div>
             <div className={classes.favorites}>
                 {favorited ?
@@ -42,7 +39,7 @@ export const DetailCard = (props:any) => {
         </div>
 
         <div className={classes['name-and-number']}>
-            <div>{pokemon.name}</div>
+            <div className={classes.name}>{pokemon.name}</div>
             <div className={classes.number}>#{pokemon.id}</div>
         </div>
 
