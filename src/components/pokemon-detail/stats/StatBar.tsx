@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import classes from './StatBar.module.css';
 
 const getBarColor = (percentage:number):string => {
@@ -11,7 +12,13 @@ const getBarColor = (percentage:number):string => {
 export const StatBar = (props:any) => {
     const statValue:number = props.statValue;
     const maxValue = props.maxValue || 255;
-    const percentage = statValue / maxValue;
+    const [percentage, setPercentate] = useState(0);
+
+    useEffect(()  =>  {
+        setTimeout(() => {
+            setPercentate(statValue / maxValue);
+        }, 500);
+    }, [maxValue, statValue]);
 
     return <div className={classes.statbar}>
         <div></div>
