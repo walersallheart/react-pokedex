@@ -1,0 +1,15 @@
+.statbar{
+    position:relative;
+    width:100%;
+    flex:1;
+}
+
+.statbar div{
+    width:100%;
+    background-color: #f5f5f5;
+    border-radius: 20px;
+    height: 7px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}

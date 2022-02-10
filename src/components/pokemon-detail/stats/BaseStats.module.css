@@ -1,0 +1,15 @@
+.base-stats{
+    display: flex;
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.stat-name{
+    width:150px;
+    color:#83888f;
+}
+
+.stat-value{
+    width:65px;
+    color:#363e47;
+}

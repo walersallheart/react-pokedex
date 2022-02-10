@@ -24,12 +24,12 @@ export type Evolution = {
 }
 
 export type PokemonStats = {
-    hp: number;
-    attack: number;
-    defense: number;
-    speed: number;
-    specialAttack:number;
-    specialDefense:number;
+    HP: number;
+    Attack: number;
+    Defense: number;
+    Speed: number;
+    SpecialAttack:number;
+    SpecialDefense:number;
 }
 
 /*
