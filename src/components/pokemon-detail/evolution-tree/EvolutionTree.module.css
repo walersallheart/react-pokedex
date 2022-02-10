@@ -3,10 +3,15 @@
     width: 100%;
     text-align: center;
     align-items: center;
-    margin-bottom:30px;
+    padding:25px 0;
     font-size: 30px;
     color:#868686;
+    border-bottom:1px solid rgba(185, 185, 185, .5);
 }
+
+    .evolution-row:last-child{
+        border-bottom: none;
+    }
 
     .evolution-row > div{
         flex:1;
