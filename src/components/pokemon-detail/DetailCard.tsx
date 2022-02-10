@@ -4,21 +4,45 @@ import { NavLink } from "react-router-dom";
 import { Pokemon } from "../../model/Pokemon";
 import { TypeList } from "../TypeList";
 
-import { faSquareXmark } from "@fortawesome/free-solid-svg-icons";
+import { faArrowLeft, faHeart } from "@fortawesome/free-solid-svg-icons";
+import { faHeart as farHeart } from '@fortawesome/free-regular-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
+import { GetFavorite, ToggleFavorite } from "../../utils/GetPokemon";
+
 import classes from './DetailCard.module.css';
+import { useEffect, useState } from "react";
 
 export const DetailCard = (props:any) => {
     const pokemon:Pokemon = props.pokemon;
 
+    const [favorited,  setFavorited] = useState(false);
+
+    useEffect(() => {
+        setFavorited(GetFavorite(Number(props.pokemon.id)));
+    }, [props.pokemon.id]);
+
+    const toggleFavorite = (event:any):void =>  {
+        console.log(event);
+
+        setFavorited(ToggleFavorite(Number(pokemon.id)));
+    }
+
     return <>
-        <div>
-            <FontAwesomeIcon icon={faSquareXmark} />
+        <div className={classes['arrow-and-favorites']}>
+            <div>
+                <NavLink to={`/`}><FontAwesomeIcon title="Back to Pokemon List" icon={faArrowLeft} /></NavLink>
+            </div>
+            <div className={classes.favorites}>
+                {favorited ?
+                    <FontAwesomeIcon onClick={toggleFavorite} title="Add to Favorites" icon={faHeart} /> :
+                    <FontAwesomeIcon onClick={toggleFavorite} title="Add to Favorites" icon={farHeart} />
+                }
+            </div>
         </div>
 
         <div className={classes['name-and-number']}>
-            <div className={classes.name}>{pokemon.name}</div>
+            <div>{pokemon.name}</div>
             <div className={classes.number}>#{pokemon.id}</div>
         </div>
 

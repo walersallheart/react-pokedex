@@ -27,6 +27,62 @@ export function GetPokemonTypeColor(id: number): string {
     return typeColor.color;
 }
 
+function replacer(key:any, value:any):any {
+    if (value instanceof Map) {
+        return {
+            dataType: 'Map',
+            value: Array.from(value.entries()), // or with spread: value: [...value]
+        };
+    } else {
+        return value;
+    }
+}
+function reviver(key:any, value:any):any {
+    if (typeof value === 'object' && value !== null) {
+        if (value.dataType === 'Map') {
+            return new Map(value.value);
+        }
+    }
+    return value;
+}
+
+export function ToggleFavorite(id: number): boolean {
+    const favoriteStorageData = localStorage.getItem('favoriteData');
+    let favoriteData: Map<String, boolean> = new Map();
+    let favorited = true;  //default to true because the first time this is called we will be making it a favorite
+    let key = 'favorite-' + id;
+
+    if (favoriteStorageData !== null) {
+        favoriteData = JSON.parse(favoriteStorageData, reviver);
+    }
+
+    if (favoriteData.has(key)) {
+        favorited = favoriteData.get(key)!;
+        favorited = !favorited;
+    }
+
+    favoriteData.set(key, favorited);
+    localStorage.setItem('favoriteData', JSON.stringify(favoriteData, replacer));
+
+    return favorited;
+}
+
+export function GetFavorite(id: number): boolean {
+    const favoriteStorageData = localStorage.getItem('favoriteData');
+    let favoriteData: Map<String, boolean> = new Map();
+    let key = 'favorite-' + id;
+
+    if (favoriteStorageData !== null) {
+        favoriteData = JSON.parse(favoriteStorageData, reviver);
+    }
+
+    if (favoriteData.has(key)) {
+        return favoriteData.get(key)!;
+    }
+
+    return false;
+}
+
 function ensure<T>(argument: T | undefined | null, message: string = 'This value was promised to be there.'): T {
     if (argument === undefined || argument === null) {
         throw new TypeError(message);
