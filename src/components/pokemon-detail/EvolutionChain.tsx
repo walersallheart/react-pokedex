@@ -15,10 +15,14 @@ export const EvolutionChain = (props:any) => {
         evolutionTree.push(GetPokemonById(evolution.num)!);
     })
 
-    if  (evolutionTree.length > 0) {
+    console.log('evolutionTree.length ->',evolutionTree.length );
+
+    if  (evolutionTree.length > 1) {
         for (let i = 0, len = evolutionTree.length -1; i<len; i++) {
             evolutionTreeContent.push(<EvolutionTree key={evolutionTree[i].name} previous={evolutionTree[i]} next={evolutionTree[i + 1]} condition={""} />);
         }
+    } else {
+        evolutionTreeContent.push(<p  className={classes['no-evolution']} key={pokemon.name}>{pokemon.name} does not evolve to or from any other Pokémon</p> );
     }
 
     return <div className={classes['evolution-chain']}>

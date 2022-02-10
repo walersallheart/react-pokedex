@@ -1,3 +1,9 @@
 .evolution-chain{
     min-height: 500px;
 }
+
+.no-evolution{
+    text-align: center;
+    font-size: 25px;
+    margin-top: 60px;
+}
