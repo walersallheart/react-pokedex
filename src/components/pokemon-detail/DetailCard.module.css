@@ -1,3 +1,4 @@
+.arrow-and-favorites,
 .name-and-number{
     display: table;
     width:90%;
@@ -7,20 +8,18 @@
     padding: 12px 0;
 }
 
+    .arrow-and-favorites > div,
     .name-and-number > div{
         display: table-cell;
-    }
-
-    .name{
         margin:5px 0;
         vertical-align: middle;
     }
 
-    .number{
+
+    .number,
+    .favorites{
         flex:1;
         text-align: right;
-        margin:5px 0;
-        vertical-align: middle;
         font-size: 20px;
     }
 

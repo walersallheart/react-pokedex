@@ -22,24 +22,28 @@ export const About = () => {
         </div>
 
         <table cellPadding={0} cellSpacing={0} className={classes.breeding}>
-            <tr>
-                <th colSpan={3}>Breeding</th>
-            </tr>
-            <tr>
-                <td>Gender</td>
-                <td><img src={`/images/icons/male.svg`} alt="Male" />{gender![0]}</td>
-                <td><img src={`/images/icons/female.svg`} alt="Female" />{gender![1]}</td>
-            </tr>
-            <tr>
-                <td>Egg Groups</td>
-                <td>{egg![0]}</td>
-                <td>&nbsp;</td>
-            </tr>
-            <tr>
-                <td>Egg Cycle</td>
-                <td>{egg![1]}</td>
-                <td>&nbsp;</td>
-            </tr>
+            <thead>
+                <tr>
+                    <th colSpan={3}>Breeding</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Gender</td>
+                    <td><img src={`/images/icons/male.svg`} alt="Male" />{gender![0]}</td>
+                    <td><img src={`/images/icons/female.svg`} alt="Female" />{gender![1]}</td>
+                </tr>
+                <tr>
+                    <td>Egg Groups</td>
+                    <td>{egg![0]}</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>Egg Cycle</td>
+                    <td>{egg![1]}</td>
+                    <td>&nbsp;</td>
+                </tr>
+            </tbody>
         </table>
     </>;
 }
