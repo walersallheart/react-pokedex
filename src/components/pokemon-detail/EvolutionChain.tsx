@@ -3,6 +3,8 @@ import { useParams } from "react-router-dom";
 import { GetPokemonById } from "../../utils/GetPokemon";
 import { EvolutionTree } from "./evolution-tree/EvolutionTree";
 
+import classes from './EvolutionChain.module.css';
+
 export const EvolutionChain = (props:any) => {
     const { id } = useParams();
     const pokemon:Pokemon = GetPokemonById(Number(id))!;
@@ -19,8 +21,8 @@ export const EvolutionChain = (props:any) => {
         }
     }
 
-    return <>
+    return <div className={classes['evolution-chain']}>
             <h2>Evolution Chain</h2>
             { evolutionTreeContent.map((pokemon, i) => pokemon) }
-    </>;
+    </div>;
 }
