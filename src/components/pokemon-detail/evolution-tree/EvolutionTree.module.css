@@ -1,0 +1,8 @@
+.evolution-row{
+    display: flex;
+    width: 100%;
+}
+
+    .evolution-row > div{
+        flex:1;
+    }

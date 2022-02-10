@@ -5,8 +5,8 @@ export type Pokemon = {
     description?:string;
     species?:string;
     profile?:PokemonProfile;
-    nextEvolution?:Evolution[];
-    prevEvolution?:Evolution[];
+    next_evolution?:Evolution[];
+    prev_evolution?:Evolution[];
     base?:PokemonStats;
 };
 

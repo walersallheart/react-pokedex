@@ -4,7 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { PokemonDetail } from './components/pokemon-detail/PokemonDetail';
 import { About } from './components/pokemon-detail/About';
 import { BaseStats } from './components/pokemon-detail/BaseStats';
-import { Evolution } from './components/pokemon-detail/Evolution';
+import { EvolutionChain } from './components/pokemon-detail/EvolutionChain';
 
 function App() {
   return (
@@ -14,7 +14,7 @@ function App() {
           <Route path="/pokemon/:id" element={<PokemonDetail />}>
             <Route path="" element={<About />} />
             <Route path="stats" element={<BaseStats />} />
-            <Route path="evolution" element={<Evolution />} />
+            <Route path="evolution" element={<EvolutionChain />} />
           </Route>
           <Route path="/" element={<PokemonList />} />
         </Routes>
