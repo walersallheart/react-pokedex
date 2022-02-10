@@ -1,12 +1,16 @@
 import { useParams } from 'react-router-dom';
 import { GetPokemonById } from "../../utils/GetPokemon";
 
+import { faVenus, faMars } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 import classes from './About.module.css';
 
 export const About = () => {
     const { id } = useParams();
     const pokemon = GetPokemonById(Number(id));
     const gender = pokemon?.profile?.gender.split(":");
+    const hasGender = pokemon?.profile?.gender?.toLowerCase() !== "genderless";
     const egg = pokemon?.profile?.egg;
 
     return <>
@@ -30,8 +34,13 @@ export const About = () => {
             <tbody>
                 <tr>
                     <td>Gender</td>
-                    <td><img src={`/images/icons/male.svg`} alt="Male" />{gender![0]}</td>
-                    <td><img src={`/images/icons/female.svg`} alt="Female" />{gender![1]}</td>
+                    <td>{ hasGender ?
+                        <>
+                            <FontAwesomeIcon color='#8994e3' title="Male" icon={faMars} /> {gender![0]}%
+                        </>:
+                        'Genderless' }
+                    </td>
+                    <td>{hasGender ? <><FontAwesomeIcon color='#f490b3' title="Female" icon={faVenus} /> {gender![1]}%</> : ' '  } </td>
                 </tr>
                 <tr>
                     <td>Egg Groups</td>

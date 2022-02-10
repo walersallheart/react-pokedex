@@ -15,8 +15,6 @@ export const EvolutionChain = (props:any) => {
         evolutionTree.push(GetPokemonById(evolution.num)!);
     })
 
-    console.log('evolutionTree.length ->',evolutionTree.length );
-
     if  (evolutionTree.length > 1) {
         for (let i = 0, len = evolutionTree.length -1; i<len; i++) {
             evolutionTreeContent.push(<EvolutionTree key={evolutionTree[i].name} previous={evolutionTree[i]} next={evolutionTree[i + 1]} condition={""} />);
