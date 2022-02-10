@@ -3,8 +3,10 @@
   src: url('fonts/circular-std-medium-500.ttf');
 }
 
-body{ /*! Temporary to make measuring against the light background of certain components easier */
-  background-color: #000;
+html,
+body{
+  margin:0;
+  padding:0;
 }
 
 .App {
@@ -13,11 +15,24 @@ body{ /*! Temporary to make measuring against the light background of certain co
     max-width: 800px;
     font-family: 'circular-std-medium-500';
     color:#303943;
-    background-image:url('~/public/images/icons/pokeball.png');
-    background-position: top -55px right -59px;
-    background-repeat: no-repeat;
     box-sizing: border-box;
-    padding: 0 18px;
+    position:relative;
+    overflow: hidden;
+}
+
+  .App::before {
+    position:absolute;
+    content:' ';
+    background-image:url('~/public/images/icons/pokeball-grey.png');
+    top: -55px;
+    right: -55px;
+    width: 250px;
+    height: 250px;
+    opacity: .2;
+  }
+
+img{
+  max-width: 100%;
 }
 
 a{
