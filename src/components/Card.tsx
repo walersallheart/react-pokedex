@@ -15,7 +15,7 @@ const Card = (props:any)  => {
 
             <TypeList pokemon={pokemon} />
 
-            <LazyLoad height={100} once style={{position:'absolute', right:'10px', bottom:'10px', zIndex:1}}>
+            <LazyLoad height={100} once style={{position:'absolute', right:'10px', bottom:'10px', zIndex:1, textAlign:'right'}}>
                 <img
                     src={`images/thumbnails/${pokemon.id}.png`}
                     alt={pokemon.name}

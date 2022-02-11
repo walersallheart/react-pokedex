@@ -6,3 +6,11 @@
     grid-row-gap: 18px;
     padding: 0 12px;
 }
+
+@media only screen and (max-width: 768px) {
+    .pokemon-list{
+        grid-column-gap: 10px;
+        grid-row-gap: 10px;
+        padding: 0px 7px;
+    }
+}
