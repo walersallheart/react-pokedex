@@ -1,7 +1,7 @@
 .card{
     color:#fff;
     border-radius: 30px;
-    padding: 18px;
+    padding: 18px 11px;
     cursor: pointer;
     position:relative;
 }
@@ -19,5 +19,5 @@
 
 .card img{
     max-width: 75%;
-    transform: translate(2px, 7px);
+    transform: translate(2px, 9px);
 }
