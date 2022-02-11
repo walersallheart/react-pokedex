@@ -44,7 +44,7 @@ export const DetailCard = (props:any) => {
         </div>
 
         <div className={classes['type-and-species']}>
-            <TypeList direction='horizontal' pokemon={pokemon} />
+            <TypeList direction='horizontal' size='large' pokemon={pokemon} />
             <div className={classes.species}>{pokemon.species}</div>
         </div>
 

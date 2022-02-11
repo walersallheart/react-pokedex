@@ -26,7 +26,7 @@
     }
 
 @media only screen and (max-width: 768px) {
-    .type-list li{
+    .type-list.large li{
         font-size: 20px;
         padding: 5px 25px;
     }
