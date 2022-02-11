@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'circular-std-medium-500';
-  src: url('fonts/circular-std-medium-500.eot');
-  src: url('fonts/circular-std-medium-500.eot?#iefix') format('embedded-opentype'),
-       url('fonts/circular-std-medium-500.woff2') format('woff2'),
-       url('fonts/circular-std-medium-500.woff') format('woff'),
-       url('fonts/circular-std-medium-500.ttf')  format('truetype'),
-       url('fonts/circular-std-medium-500.svg#Circular Std Medium') format('svg');
+  src: url('~/public/fonts/circular-std-medium-500.eot');
+  src: url('~/public/fonts/circular-std-medium-500.eot?#iefix') format('embedded-opentype'),
+       url('~/public/fonts/circular-std-medium-500.woff2') format('woff2'),
+       url('~/public/fonts/circular-std-medium-500.woff') format('woff'),
+       url('~/public/fonts/circular-std-medium-500.ttf')  format('truetype'),
+       url('~/public/fonts/circular-std-medium-500.svg#Circular Std Medium') format('svg');
 }
 
 html,
